@@ -1,0 +1,5 @@
+local/client_secrets.json
+local/token.json
+downloads/
+*.zip
+__pycache__/

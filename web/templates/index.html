@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Auto Video Downloader</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin: 32px; color:#111; }
+      h1 { margin-bottom: 6px; }
+      textarea { width: 100%; min-height: 160px; padding: 12px; border-radius:8px; border:1px solid #ddd; font-size:14px; }
+      .btn { background:#0b6efd; color:white; padding:10px 16px; border-radius:8px; border:none; cursor:pointer; }
+      .container { max-width:900px; margin:0 auto; }
+      .foot { margin-top:18px; color:#666; font-size:13px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Auto Video Downloader</h1>
+      <p>Paste playlist/video URLs (one per line) and click Queue.</p>
+      <form action="/enqueue" method="post">
+        <textarea name="urls" placeholder="https://youtube.com/playlist?list=...&#10;https://youtu.be/..." required></textarea>
+        <div style="margin-top:12px;">
+          <button class="btn">Queue</button>
+        </div>
+      </form>
+
+      <div class="foot">
+        <p>Tip: Use yt-dlp-compatible links. Files are uploaded to Google Drive and zipped automatically.</p>
+      </div>
+    </div>
+  </body>
+</html>
